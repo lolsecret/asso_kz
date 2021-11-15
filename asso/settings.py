@@ -77,7 +77,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'asso.wsgi.application'
 
-
+SQLALCHEMY_TRACK_MODIFICATIONS=False
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 import dj_database_url
