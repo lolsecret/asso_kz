@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'apps.trips.apps.TripsConfig',
     'apps.users.apps.UsersConfig',
-
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -80,18 +80,29 @@ WSGI_APPLICATION = 'asso.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# local
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.getenv('PGDATABASE', 'asso'),
+#         'USER': os.getenv('PGUSER', 'asso'),
+#         'PASSWORD': os.getenv('PGPASSWORD', 'asso'),
+#         'HOST': os.getenv('PGHOST', 'localhost'),
+#         'PORT': os.getenv('PGPORT', '5432'),
+#     }
+# }
+
+# TEST
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('PGDATABASE', 'asso'),
-        'USER': os.getenv('PGUSER', 'asso'),
-        'PASSWORD': os.getenv('PGPASSWORD', 'asso'),
-        'HOST': os.getenv('PGHOST', 'localhost'),
-        'PORT': os.getenv('PGPORT', '5432'),
+        'NAME': 'd6vmet7v35553k',
+        'USER': 'mvdergojxblteu',
+        'PASSWORD': 'ee8b6f0c3fdacb66e6a3c3f285a84396e71e94d8e931d2ffc7568c2da1c82f',
+        'HOST': 'ec2-34-253-116-145.eu-west-1.compute.amazonaws.com',
+        'PORT': 5432,
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
