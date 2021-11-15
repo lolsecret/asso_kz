@@ -1,0 +1,1 @@
+web: gunicorn asso.wsgi --log-file -
