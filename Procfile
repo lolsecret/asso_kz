@@ -1,1 +1,1 @@
-web: gunicorn asso.wsgi --log-file -
+web: gunicorn wsgi:app
