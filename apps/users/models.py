@@ -20,7 +20,7 @@ class Services(TimestampModel):
     )
 
     def __str__(self):
-        return self.name
+        return self.get_name_display()
 
 class UserManager(BaseUserManager):
     """Define a model manager for User model with no username field."""

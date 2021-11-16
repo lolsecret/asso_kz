@@ -19,7 +19,7 @@ class ServiceNames(TextChoices):
     HYDRODYNAMIC_FLUSHING = "HYDRODYNAMIC_FLUSHING", "Гидродинамическая промывка"
     GRADER = "GRADER", "Грейдер"
     CRAWLER_CRANE = "CRAWLER_CRANE", "Гусеничный кран"
-    CRUSHER_MACHINE = "CRUSHER_MACHINE"
+    CRUSHER_MACHINE = "CRUSHER_MACHINE", "Дробилка"
     RINK_MACHINE = "RINK_MACHINE", "Каток"
     MUNICIPAL_SPECIAL_MACHINE = "MUNICIPAL_SPECIAL_MACHINE", "Коммунальная спецтехника"
     COMPRESSOR = "COMPRESSOR", "Компрессор"
