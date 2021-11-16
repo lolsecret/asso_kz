@@ -98,4 +98,4 @@ class Driver(TimestampModel):
     )
 
     def __str__(self):
-        return f'"Исполнитель:" {self.user}, {self.service.name}'
+        return f'"Исполнитель:" {self.user}, {self.service.get_name_display()}'
