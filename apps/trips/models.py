@@ -25,7 +25,7 @@ class Trip(TimestampModel):
     )
     driver = models.ForeignKey(
         Driver,
-        verbose_name="Заказчик",
+        verbose_name="Исполнитель",
         null=True,
         blank=True,
         on_delete=models.DO_NOTHING,
@@ -33,7 +33,7 @@ class Trip(TimestampModel):
     )
     rider = models.ForeignKey(
         Rider,
-        verbose_name="Исполнитель",
+        verbose_name="Заказчик",
         null=True,
         blank=True,
         on_delete=models.DO_NOTHING,
