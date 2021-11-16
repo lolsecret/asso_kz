@@ -16,8 +16,6 @@ class TripView(viewsets.ReadOnlyModelViewSet, UpdateModelMixin):
     queryset = Trip.objects.all()
     serializer_class = TripSerializer
 
-    def get_object(self):
-        return Trip.objects.filter(status=TripStatus.ACTIVE, id=self.kwargs.get("id")).first()
 
 
 
