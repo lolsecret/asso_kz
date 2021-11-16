@@ -20,7 +20,7 @@ class Trip(TimestampModel):
         verbose_name="Статус",
         max_length=20,
         choices=TripStatus.choices,
-        default=TripStatus.REQUESTED,
+        default=TripStatus.ACTIVE,
         db_index=True,
     )
     driver = models.ForeignKey(

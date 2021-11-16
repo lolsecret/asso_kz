@@ -28,10 +28,13 @@ class ServiceNames(TextChoices):
 
 
 class TripStatus(TextChoices):
-    REQUESTED = 'REQUESTED', 'Запрошен'
-    STARTED = 'STARTED', 'Начата'
-    IN_PROGRESS = 'IN_PROGRESS', "В процессе"
-    COMPLETED = 'COMPLETED', "Завершена"
+    ACTIVE = 'ACTIVE', 'Активный'
+    APPROVING = 'APPROVING', 'На подтверждении'
+    APPROVED = 'APPROVED', "Подтвержден"
+    ON_WAY = 'ON_WAY', 'В пути'
+    WAITING = 'WAITING', 'В ожидании'
+    ON_TASK = 'ON_TASK', 'На исполнении'
+    FINISHED = 'FINISHED', 'Завершен'
 
 
 class PaymentTypes(TextChoices):

@@ -5,6 +5,8 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from apps.users.views import SignUpView, LogInView
+from rest_framework.authentication import BasicAuthentication
+
 schema_view = get_schema_view(
    openapi.Info(
       title="Snippets API",
@@ -23,7 +25,7 @@ urlpatterns = [
     path('api/sign_up/', SignUpView.as_view(), name='sign_up'),
     path('api/log_in/', LogInView.as_view(), name='log_in'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/trip/', include('apps.trips.urls', 'trip',)),
+    path('api/trip/', include('apps.trips.urls',)),
     path("docs/",
         schema_view.with_ui("swagger", cache_timeout=0),
         name="swagger-schema",

@@ -62,7 +62,7 @@ class User(AbstractUser):
         regex=r'^\+?1?\d{9,15}$',
         message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
     mobile_phone = models.CharField('phone number', validators=[phone_regex], max_length=17,
-                             unique=True, null=True)  # validators should be a list
+                             unique=True, null=True)
     role = models.CharField("Роль", max_length=20, choices=UserRoles.choices, default=UserRoles.RIDER)
     is_driver = models.BooleanField(default=False)
     is_rider = models.BooleanField(default=False)
