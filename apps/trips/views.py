@@ -1,8 +1,7 @@
-from rest_framework import generics, viewsets, permissions
+from rest_framework import viewsets, permissions
 from rest_framework.generics import GenericAPIView, get_object_or_404
 from rest_framework.mixins import UpdateModelMixin
 
-from . import TripStatus
 from .models import Trip
 from .serializers import TripSerializer
 from rest_framework.response import Response
@@ -15,8 +14,6 @@ class TripView(viewsets.ReadOnlyModelViewSet, UpdateModelMixin):
     permission_classes = (permissions.AllowAny,)
     queryset = Trip.objects.all()
     serializer_class = TripSerializer
-
-
 
 
 class CreateTripView(GenericAPIView):
