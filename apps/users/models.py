@@ -14,7 +14,7 @@ class Services(TimestampModel):
 
     name = models.CharField(
         "Название техники/услуги",
-        max_length=22,
+        max_length=50,
         choices=ServiceNames.choices,
         default=ServiceNames.BULLDOZER
     )
