@@ -9,8 +9,8 @@ from rest_framework import status
 
 
 class TripView(viewsets.ReadOnlyModelViewSet, UpdateModelMixin):
-    lookup_field = 'id' # new
-    lookup_url_kwarg = 'trip_id' # new
+    lookup_field = 'id'
+    lookup_url_kwarg = 'trip_id'
     permission_classes = (permissions.AllowAny,)
     queryset = Trip.objects.all()
     serializer_class = TripSerializer
