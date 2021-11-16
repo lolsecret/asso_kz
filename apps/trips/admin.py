@@ -6,14 +6,16 @@ from .models import Trip
 
 class TripAdmin(admin.ModelAdmin):
     fields = (
-        'id', 'pick_up_address', 'drop_off_address', 'status',
-        'driver', 'rider',
+        'id', 'address', 'status',
+        'driver', 'rider', 'comment',
         'created_at', 'updated_at',
+        'price', 'payment_type'
     )
     list_display = (
-        'id', 'pick_up_address', 'drop_off_address', 'status',
-        'driver', 'rider',
+        'id', 'address', 'status',
+        'driver', 'rider', 'comment',
         'created_at', 'updated_at',
+        'price', 'payment_type'
     )
     list_filter = (
         'status',
@@ -21,7 +23,9 @@ class TripAdmin(admin.ModelAdmin):
     readonly_fields = (
         'id', 'created_at', 'updated_at',
     )
-
+    search_fields = (
+        'id',
+    )
 
 
 admin.site.register(Trip, TripAdmin)
