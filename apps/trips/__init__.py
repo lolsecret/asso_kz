@@ -32,3 +32,8 @@ class TripStatus(TextChoices):
     STARTED = 'STARTED', 'Начата'
     IN_PROGRESS = 'IN_PROGRESS', "В процессе"
     COMPLETED = 'COMPLETED', "Завершена"
+
+
+class PaymentTypes(TextChoices):
+    CASH = "CASH", "Наличные"
+    CARD = "CARD", "Карта"
