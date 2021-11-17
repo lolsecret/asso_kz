@@ -74,6 +74,9 @@ class User(AbstractUser):
     USERNAME_FIELD = 'mobile_phone'
     objects = UserManager()
 
+    def __str__(self):
+        return f"{self.mobile_phone if hasattr(self, 'mobile_phone') else self.username}"
+
     class Meta:
         verbose_name = "Пользователь"
         verbose_name_plural = "Пользователи"

@@ -1,4 +1,3 @@
-
 from django.core.asgi import get_asgi_application
 from django.urls import path # new
 
