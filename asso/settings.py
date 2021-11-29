@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.postgres',
+    'corsheaders'
     'channels',
     'rest_framework',
     'apps.trips.apps.TripsConfig',
@@ -187,3 +188,4 @@ SWAGGER_SETTINGS = {
     },
     "DEEP_LINKING": True,
 }
+CORS_ORIGIN_ALLOW_ALL = True
