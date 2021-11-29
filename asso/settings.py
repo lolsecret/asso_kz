@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.postgres',
-    'corsheaders'
+    'corsheaders',
     'channels',
     'rest_framework',
     'apps.trips.apps.TripsConfig',
