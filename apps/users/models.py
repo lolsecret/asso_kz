@@ -68,6 +68,11 @@ class User(AbstractUser):
         max_length=17,
         unique=True, null=True
     )
+    email = models.EmailField(
+        "Email покупателя",
+        null=True,
+        blank=True
+    )
     role = models.CharField("Роль", max_length=20, choices=UserRoles.choices, default=UserRoles.RIDER)
     is_driver = models.BooleanField(default=False)
     is_rider = models.BooleanField(default=False)
