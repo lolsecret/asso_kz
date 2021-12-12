@@ -39,3 +39,8 @@ class LogInSerializer(TokenObtainPairSerializer): # new
             if key != 'id':
                 token[key] = value
         return token
+
+
+class OTPSerializer(serializers.Serializer):
+    otp = serializers.CharField()
+    email = serializers.EmailField()

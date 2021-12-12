@@ -4,7 +4,7 @@ from rest_framework_simplejwt.views import TokenRefreshView
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
-from apps.users.views import SignUpView, LogInView
+from apps.users.views import SignUpView, LogInView, ValidateOTPView
 from rest_framework.authentication import BasicAuthentication
 
 schema_view = get_schema_view(
@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/sign_up/', SignUpView.as_view(), name='sign_up'),
     path('api/log_in/', LogInView.as_view(), name='log_in'),
+    path('api/validate_otp/', ValidateOTPView.as_view(), name="validate_otp"),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/trip/', include('apps.trips.urls',)),
     path("docs/",

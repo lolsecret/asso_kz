@@ -39,12 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.postgres',
+    'drf_yasg',
     'corsheaders',
     'channels',
     'rest_framework',
     'apps.trips.apps.TripsConfig',
     'apps.users.apps.UsersConfig',
-    'drf_yasg',
+    'apps.sms.apps.SmsConfig',
 ]
 
 MIDDLEWARE = [
@@ -76,6 +77,15 @@ TEMPLATES = [
         },
     },
 ]
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "tamer_sabirbek97@mail.ru"
+EMAIL_HOST_PASSWORD = "5zA8kCyDMX33PkcxSBz8"
+# "5zA8kCyDMX33PkcxSBz8" pass mailru для внешних сервисов
+
+OTP_VALIDITY_PERIOD = 5 # min
 
 WSGI_APPLICATION = 'asso.wsgi.application'
 
